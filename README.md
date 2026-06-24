@@ -1,4 +1,4 @@
-# CI/CD Agents Security & Observability Pipeline
+# CI/CD Agents Containerization Pipeline
 
 Ce dépôt contient l'architecture conteneurisée et sécurisée d'un système multi-agents basé sur **Agentic Fusion AI**. Ce pipeline combine l'extraction de documents complexes par vision (VOCR), l'interrogation de bases de données NoSQL (FusionDB Query) et l'exécution d'actions via des outils avancés (Composio Gmail & MCP Tools).
 
