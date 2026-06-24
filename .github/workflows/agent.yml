@@ -1,0 +1,55 @@
+name: CI/CD Agents Security & Observability
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-security:
+    runs-on: ubuntu-latest
+    steps:
+    # Utilisation de v4 (recommandé pour éviter les warnings Node.js)
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Security Linter (Bandit)
+      run: |
+        pip install bandit
+        # Vérifie la sécurité de votre code source et de vos scripts de test
+        # -ll permet de filtrer pour n'afficher que les alertes de sévérité Moyenne à Haute
+        bandit -r src/ tests/ -ll || echo "Veuillez vérifier les alertes de sécurité Bandit"
+
+    - name: Run Agent Tests
+      env:
+        # Correspondance exacte avec vos nouvelles variables dynamiques du .env
+        DATABASE_URI: ${{ secrets.DATABASE_URI }}
+        DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+        JIGSAWSTACK_API_KEY: ${{ secrets.JIGSAWSTACK_API_KEY }}
+        VOCR_DOCUMENT_URL: ${{ secrets.VOCR_DOCUMENT_URL }}
+      run: |
+        pytest tests/test-agent.py
+
+  build-docker:
+    needs: test-and-security
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build Docker Image
+      run: |
+        # Build de l'image contenant le fichier j18-VOCR (1).json nettoyé
+        docker build -t security-observability-agent:latest .

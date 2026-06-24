@@ -1,0 +1,717 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "JigsawStackVOCR",
+            "id": "JigsawStackVOCR-CufZC",
+            "name": "vocr_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "TypeConverterComponent-nGYEC",
+            "inputTypes": [
+              "Message",
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__JigsawStackVOCR-CufZC{œdataTypeœ:œJigsawStackVOCRœ,œidœ:œJigsawStackVOCR-CufZCœ,œnameœ:œvocr_resultsœ,œoutput_typesœ:[œDataœ]}-TypeConverterComponent-nGYEC{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-nGYECœ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "JigsawStackVOCR-CufZC",
+        "sourceHandle": "{œdataTypeœ:œJigsawStackVOCRœ,œidœ:œJigsawStackVOCR-CufZCœ,œnameœ:œvocr_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "TypeConverterComponent-nGYEC",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-nGYECœ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TypeConverterComponent",
+            "id": "TypeConverterComponent-nGYEC",
+            "name": "message_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "LanguageModelComponent-257qQ",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TypeConverterComponent-nGYEC{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-nGYECœ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}-LanguageModelComponent-257qQ{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-257qQœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TypeConverterComponent-nGYEC",
+        "sourceHandle": "{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-nGYECœ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "LanguageModelComponent-257qQ",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-257qQœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-257qQ",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "query",
+            "id": "MongoDBQuery-yKPJA",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__LanguageModelComponent-257qQ{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-257qQœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-MongoDBQuery-yKPJA{œfieldNameœ:œqueryœ,œidœ:œMongoDBQuery-yKPJAœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-257qQ",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-257qQœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "MongoDBQuery-yKPJA",
+        "targetHandle": "{œfieldNameœ:œqueryœ,œidœ:œMongoDBQuery-yKPJAœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ComposioGmailAPIComponent",
+            "id": "ComposioGmailAPIComponent-0O3gK",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-BYCOS",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__ComposioGmailAPIComponent-0O3gK{œdataTypeœ:œComposioGmailAPIComponentœ,œidœ:œComposioGmailAPIComponent-0O3gKœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-BYCOS{œfieldNameœ:œtoolsœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "ComposioGmailAPIComponent-0O3gK",
+        "sourceHandle": "{œdataTypeœ:œComposioGmailAPIComponentœ,œidœ:œComposioGmailAPIComponent-0O3gKœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-BYCOS",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-1emx0",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "system_prompt",
+            "id": "Agent-BYCOS",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt Template-1emx0{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-1emx0œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-Agent-BYCOS{œfieldNameœ:œsystem_promptœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt Template-1emx0",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-1emx0œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-BYCOS",
+        "targetHandle": "{œfieldNameœ:œsystem_promptœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "MongoDBQuery",
+            "id": "MongoDBQuery-yKPJA",
+            "name": "execute_query",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "Agent-BYCOS",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__MongoDBQuery-yKPJA{œdataTypeœ:œMongoDBQueryœ,œidœ:œMongoDBQuery-yKPJAœ,œnameœ:œexecute_queryœ,œoutput_typesœ:[œMessageœ]}-Agent-BYCOS{œfieldNameœ:œinput_valueœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "MongoDBQuery-yKPJA",
+        "sourceHandle": "{œdataTypeœ:œMongoDBQueryœ,œidœ:œMongoDBQuery-yKPJAœ,œnameœ:œexecute_queryœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-BYCOS",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-BYCOSœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "JigsawStackVOCR",
+            "id": "JigsawStackVOCR-UUNWC",
+            "name": "vocr_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "TypeConverterComponent-5aJqV",
+            "inputTypes": [
+              "Message",
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__JigsawStackVOCR-UUNWC{œdataTypeœ:œJigsawStackVOCRœ,œidœ:œJigsawStackVOCR-UUNWCœ,œnameœ:œvocr_resultsœ,œoutput_typesœ:[œDataœ]}-TypeConverterComponent-5aJqV{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-5aJqVœ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "JigsawStackVOCR-UUNWC",
+        "sourceHandle": "{œdataTypeœ:œJigsawStackVOCRœ,œidœ:œJigsawStackVOCR-UUNWCœ,œnameœ:œvocr_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "TypeConverterComponent-5aJqV",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-5aJqVœ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "MCPTools",
+            "id": "MCPTools-tbUC9",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-sxRln",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__MCPTools-tbUC9{œdataTypeœ:œMCPToolsœ,œidœ:œMCPTools-tbUC9œ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-sxRln{œfieldNameœ:œtoolsœ,œidœ:œAgent-sxRlnœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "MCPTools-tbUC9",
+        "sourceHandle": "{œdataTypeœ:œMCPToolsœ,œidœ:œMCPTools-tbUC9œ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-sxRln",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-sxRlnœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TypeConverterComponent",
+            "id": "TypeConverterComponent-5aJqV",
+            "name": "message_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "GroqModel-fLXKN",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TypeConverterComponent-5aJqV{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-5aJqVœ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}-GroqModel-fLXKN{œfieldNameœ:œinput_valueœ,œidœ:œGroqModel-fLXKNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TypeConverterComponent-5aJqV",
+        "sourceHandle": "{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-5aJqVœ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "GroqModel-fLXKN",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œGroqModel-fLXKNœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GroqModel",
+            "id": "GroqModel-fLXKN",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "Agent-sxRln",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GroqModel-fLXKN{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-fLXKNœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-Agent-sxRln{œfieldNameœ:œinput_valueœ,œidœ:œAgent-sxRlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GroqModel-fLXKN",
+        "sourceHandle": "{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-fLXKNœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-sxRln",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-sxRlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "JigsawStackVOCR-CufZC",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extract data from any document type in a consistent structure with fine-tuned vLLMs for the highest accuracy",
+            "display_name": "VOCR",
+            "documentation": "https://jigsawstack.com/docs/api-reference/ai/vocr",
+            "edited": false,
+            "field_order": [
+              "api_key",
+              "prompts",
+              "url",
+              "file_store_key",
+              "page_range_start",
+              "page_range_end"
+            ],
+            "frozen": false,
+            "icon": "JigsawStack",
+            "legacy": false,
+            "lf_version": "1.7.0",
+            "metadata": {
+              "code_hash": "a44491947ba7",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": null
+                  },
+                  {
+                    "name": "jigsawstack",
+                    "version": "0.2.7"
+                  }
+                ],
+                "total_dependencies": 2
+              },
+              "module": "lfx.components.jigsawstack.vocr.JigsawStackVOCRComponent"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "VOCR results",
+                "group_outputs": false,
+                "method": "vocr",
+                "name": "vocr_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "JigsawStack API Key",
+                "dynamic": false,
+                "info": "Your JigsawStack API key for authentication",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "${JIGSAWSTACK_API_KEY}"
+              },
+              "file_store_key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "File Store Key",
+                "dynamic": false,
+                "info": "The key used to store the image on Jigsawstack File Storage. Not required if url is specified.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "file_store_key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "page_range_end": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Page Range End",
+                "dynamic": false,
+                "info": "Page range end limit for the document. If not specified, all pages will be processed.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "page_range_end",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": ""
+              },
+              "page_range_start": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Page Range",
+                "dynamic": false,
+                "info": "Page range start limit for the document. If not specified, all pages will be processed.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "page_range_start",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 0
+              },
+              "prompts": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Prompts",
+                "dynamic": false,
+                "info": "The prompts used to describe the image.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prompts",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "extract text"
+              },
+              "url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "The image or document url. Not required if file_store_key is specified.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "url",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "${VOCR_DOCUMENT_URL}"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "JigsawStackVOCR"
+        },
+        "dragging": false,
+        "id": "JigsawStackVOCR-CufZC",
+        "measured": {
+          "height": 608,
+          "width": 320
+        },
+        "position": {
+          "x": -154,
+          "y": 153.00694274902344
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "JigsawStackVOCR-UUNWC",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extract data from any document type in a consistent structure with fine-tuned vLLMs for the highest accuracy",
+            "display_name": "VOCR",
+            "documentation": "https://jigsawstack.com/docs/api-reference/ai/vocr",
+            "edited": false,
+            "frozen": false,
+            "icon": "JigsawStack",
+            "legacy": false,
+            "lf_version": "1.7.0",
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "VOCR results",
+                "group_outputs": false,
+                "method": "vocr",
+                "name": "vocr_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "JigsawStack API Key",
+                "dynamic": false,
+                "info": "Your JigsawStack API key for authentication",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "${JIGSAWSTACK_API_KEY}"
+              },
+              "url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "The image or document url. Not required if file_store_key is specified.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "url",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "${VOCR_DOCUMENT_URL}"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "JigsawStackVOCR"
+        },
+        "dragging": false,
+        "id": "JigsawStackVOCR-UUNWC",
+        "measured": {
+          "height": 608,
+          "width": 320
+        },
+        "position": {
+          "x": -154,
+          "y": 800
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "MongoDBQuery-yKPJA",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Input to this tool is a detailed and correct FusionDB query, output is a result from the database.",
+            "display_name": "FusionDB Query",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "database_uri",
+              "database_name",
+              "collection_name",
+              "operation",
+              "query"
+            ],
+            "frozen": false,
+            "icon": "MongoDB",
+            "legacy": false,
+            "lf_version": "1.7.0",
+            "metadata": {
+              "code_hash": "37cb28cb9167",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "pymongo",
+                    "version": "4.10.1"
+                  },
+                  {
+                    "name": "bson",
+                    "version": "4.10.1"
+                  },
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 3
+              },
+              "keywords": [
+                "mongodb",
+                "database",
+                "query",
+                "execute",
+                "nosql"
+              ],
+              "module": "lfx.components.data_source.mongodb_query.MongoDBQueryComponent"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Query Result",
+                "group_outputs": false,
+                "method": "execute_query",
+                "name": "execute_query",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "database_uri": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Database URI",
+                "required": true,
+                "info": "MongoDB connection string",
+                "name": "database_uri",
+                "type": "str",
+                "value": "${DATABASE_URI}"
+              },
+              "database_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Database Name",
+                "required": true,
+                "info": "Name of the MongoDB database",
+                "name": "database_name",
+                "type": "str",
+                "value": "${DATABASE_NAME}"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "MongoDBQuery"
+        },
+        "dragging": false,
+        "id": "MongoDBQuery-yKPJA",
+        "measured": {
+          "height": 550,
+          "width": 320
+        },
+        "position": {
+          "x": 500,
+          "y": 450
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 585.2031833420158,
+      "y": -1,
+      "zoom": 1
+    }
+  }
+}

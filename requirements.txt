@@ -1,0 +1,7 @@
+pymongo==4.10.1
+bson==4.10.1
+jigsawstack==0.2.7
+langchain-core>=0.3.80
+pydantic>=2.11.10
+pytest>=7.0.0
+python-dotenv>=1.0.0
